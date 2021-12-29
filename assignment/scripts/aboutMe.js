@@ -38,7 +38,7 @@ let food = 'Avocados';
 
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
 
-let pets = 5;
+let pets = 3;
 
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 
@@ -46,6 +46,7 @@ let friendsPets = 1;
 
 // 11 - Add two pets to your `pets` variable
 
+pets += 2;
 
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 
@@ -77,18 +78,12 @@ if ( luckyNumber == 2 && adventurous == true) {
 if ( pets < allowedPets ) {
   console.log('I can have more pets!');
 }
-  if ( pets == allowedPets ) {
+else if ( pets == allowedPets ) {
     console.log('I have enough pets');
   }
-  if ( pets > allowedPets ) {
+else if ( pets > allowedPets ) {
     console.log('Oh no, I have too many pets!');
   }
-
-
-
-
-
-
 
 // STRETCH GOALS:
 
@@ -98,6 +93,26 @@ if ( pets < allowedPets ) {
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
 
+let mostPets;
+if (pets > friendsPets) {
+  mostPets = pets
+}
+else if (friendsPets > pets) {
+  mostPets = friendsPets
+}
+console.log(mostPets);
+
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
 
-// 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+switch(mostPets) {
+  case 0: (pets > friendsPets)
+    break;
+  case 1:
+    (friendsPets > pets)
+    break;
+}
+console.log(mostPets);
+
+// 18 -- Rewrite question 13 with a `n operator. You'll need to do research!
+
+console.log(( pets > friendsPets ) ? "I have more pets" : "My friend has more pets" );
